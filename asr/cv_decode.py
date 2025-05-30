@@ -1,4 +1,5 @@
-import os 
+import os
+
 import pandas as pd
 import requests
 from tqdm import tqdm
@@ -49,4 +50,4 @@ for i in tqdm(range(len(data_index))):
     # break
 
 data_index['generated_text'] = results
-data_index.to_csv(os.path.join(TARGET_DIR, f"{TARGET}_asr.csv"), index=False)
+data_index.to_csv(f"./{TARGET}_asr.csv", index=False)
