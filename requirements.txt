@@ -1,7 +1,10 @@
 ipykernel
 torch
-transformers
+transformers==4.36
 soundfile
 pydub
 pandas
 requests
+scikit-learn
+torchaudio
+torchvision
