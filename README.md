@@ -1,6 +1,6 @@
 # my-test
 
-requirements: at least 1 GPU with 8GB VRAM
+requirements: Running at 1 A100 80GB
 
 ## Data set-up
 
