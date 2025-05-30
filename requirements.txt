@@ -1,6 +1,6 @@
 ipykernel
 torch
-transformers==4.36
+transformers==4.27.0
 soundfile
 pydub
 pandas
@@ -8,3 +8,9 @@ requests
 scikit-learn
 torchaudio
 torchvision
+evaluate
+jiwer
+shutil
+InstructorEmbedding
+sentence-transformers==2.2.2
+huggingface-hub==0.25.2

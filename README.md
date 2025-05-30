@@ -33,3 +33,15 @@ docker compose -f docker-compose-asr.yaml up --build -d
 python asr/cv_decode.py # The result is saved in the data/cv-valid-dev, but since data directory is ignored in git, it's in example_result/cv-valid-dev_asr.csv
 
 ```
+
+## Task 2
+
+### 1. Finetuning the Model
+
+```bash
+cd asr-train
+
+python cv-train-2a.py
+```
+
+### 2. Plot the result, and run inference comparasion
