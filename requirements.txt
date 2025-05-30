@@ -1,0 +1,7 @@
+ipykernel
+torch
+transformers
+soundfile
+pydub
+pandas
+requests

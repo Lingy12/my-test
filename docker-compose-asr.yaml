@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  asr-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: asr-api
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+    environment:
+      - PORT=8001
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
