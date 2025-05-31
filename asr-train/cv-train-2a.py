@@ -131,7 +131,7 @@ def train(run_final_validation: bool = True):
     LEARNING_RATE = 1e-5
     TRAIN_BATCH_SIZE = 16
     VAL_BATCH_SIZE = 32
-    NUM_EPOCHS = 3
+    NUM_EPOCHS = 10
     # EVAL_STEP: Controls how often validation is run and metrics are evaluated
     EVAL_STEP = 1000
     # LOG_STEP: Controls how often training loss is logged to console

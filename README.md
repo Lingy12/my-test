@@ -45,14 +45,14 @@ python cv-train-2a.py # Note the pipeline is also in cv-train-2a.ipynb, but I pu
 
 # This will create the model and results.json containing intermediate train and validation logging result.
 
-mv ../models/checkpoints/best-model ../models/wav2vec2-large-960h-cv
+mv ../models/checkpoints/best_model ../models/wav2vec2-large-960h-cv
 ```
 
-### 2. Plot the result, and run inference comparasion
+### 2. Plot the result, and run inference comparasion. 
 
 ```bash
 
-# Use part after Training in cv-train-2a.ipynb
+# Use part after Training in cv-train-2a.ipynb. The interpretation of intermediate result also in the notebook.
 
 ```
 

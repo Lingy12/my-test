@@ -28,7 +28,7 @@ cv-valid-dev/sample-000025.mp3,but that's why you created the game in the first 
 cv-valid-dev/sample-000026.mp3,don't say that again,1,0,,,,,True
 cv-valid-dev/sample-000027.mp3,he had seen the shooting star and was persuaded that a meteorite lay somewhere nearby,2,1,,,,,False
 cv-valid-dev/sample-000028.mp3,it turned out to be a bitter tea,3,0,,,,,False
-cv-valid-dev/sample-000029.mp3,are you gonna throw a rock,1,0,twenties,male,canada,,True
+cv-valid-dev/sample-000029.mp3,are you gonna throw a rock,1,0,twenties,male,canada,,False
 cv-valid-dev/sample-000030.mp3,among these people were a couple of cyclists a gardener i employed sometimes and a girl carrying a baby,2,1,twenties,male,indian,,False
 cv-valid-dev/sample-000031.mp3,my tax dollars pay for those public school proms,3,0,,,,,False
 cv-valid-dev/sample-000032.mp3,they looked for the fallen mass but found nothing,3,0,,,,,False
@@ -120,7 +120,7 @@ cv-valid-dev/sample-000117.mp3,but you are in the desert,3,0,thirties,male,us,,F
 cv-valid-dev/sample-000118.mp3,he was more confident in himself though and felt as though he could conquer the world,2,1,,,,,False
 cv-valid-dev/sample-000119.mp3,she refilled her vessel and left,3,0,twenties,male,us,,False
 cv-valid-dev/sample-000120.mp3,i noticed that the boy answered,1,0,,,,,False
-cv-valid-dev/sample-000121.mp3,throughout the entire day we will be on the lookout for our enemies,3,0,,,,,True
+cv-valid-dev/sample-000121.mp3,throughout the entire day we will be on the lookout for our enemies,3,0,,,,,False
 cv-valid-dev/sample-000122.mp3,at other times at a crucial moment i make it easier for things to happen,2,0,,,,,False
 cv-valid-dev/sample-000123.mp3,all the joy he had seen that morning had suddenly disappeared,6,0,thirties,male,england,,False
 cv-valid-dev/sample-000124.mp3,you can't desert now,1,0,,,,,False
@@ -168,7 +168,7 @@ cv-valid-dev/sample-000165.mp3,he felt weighted down by the centuries of time si
 cv-valid-dev/sample-000166.mp3,fatima the girl said averting her eyes,2,0,,,,,False
 cv-valid-dev/sample-000167.mp3,the boy was relieved,5,0,teens,male,us,,False
 cv-valid-dev/sample-000168.mp3,in any case it's good that you've learned that everything in life has its price,2,0,,,,,False
-cv-valid-dev/sample-000169.mp3,i'm not rubbing it in,1,0,twenties,male,indian,,False
+cv-valid-dev/sample-000169.mp3,i'm not rubbing it in,1,0,twenties,male,indian,,True
 cv-valid-dev/sample-000170.mp3,now let's see what you look like when you protest,1,0,fifties,female,,,False
 cv-valid-dev/sample-000171.mp3,few people realise the immensity of vacancy,5,0,thirties,male,us,,False
 cv-valid-dev/sample-000172.mp3,on the very first page it described a burial ceremony,3,1,,,,,False
@@ -182,7 +182,7 @@ cv-valid-dev/sample-000179.mp3,worked hard just to have food and water like the 
 cv-valid-dev/sample-000180.mp3,what a load of trash sarah opined,1,0,fifties,male,australia,,False
 cv-valid-dev/sample-000181.mp3,rest well tonight as if you were a warrior preparing for combat,4,0,,,,,False
 cv-valid-dev/sample-000182.mp3,the teenagers put on red hoodies for their annual toboggan run,1,0,thirties,male,canada,,False
-cv-valid-dev/sample-000183.mp3,learn to recognize omens and follow them the old king had said,2,0,,,,,False
+cv-valid-dev/sample-000183.mp3,learn to recognize omens and follow them the old king had said,2,0,,,,,True
 cv-valid-dev/sample-000184.mp3,berlin can be so lovely this time of year,1,0,twenties,male,us,,False
 cv-valid-dev/sample-000185.mp3,laura took out a cigarette and placed it in her mouth,1,0,fourties,,australia,,False
 cv-valid-dev/sample-000186.mp3,they were fascinating stories each of them lived out his destiny to the end,3,0,,,,,False
@@ -582,7 +582,7 @@ cv-valid-dev/sample-000579.mp3,how should i know,1,0,twenties,male,us,,True
 cv-valid-dev/sample-000580.mp3,i thought about the difficulties in translation that might arise,5,0,,,,,False
 cv-valid-dev/sample-000581.mp3,it means only that the heart does what it can the alchemist said,1,0,,,,,False
 cv-valid-dev/sample-000582.mp3,about eleven i walked back to my home in maybury because nothing seemed to be happening,2,0,,,,,False
-cv-valid-dev/sample-000583.mp3,can i help you asked the man behind the window,1,0,,,,,True
+cv-valid-dev/sample-000583.mp3,can i help you asked the man behind the window,1,0,,,,,False
 cv-valid-dev/sample-000584.mp3,i'll talk to you tonight,1,0,,,,,False
 cv-valid-dev/sample-000585.mp3,the monk was irritated,2,0,,,,,False
 cv-valid-dev/sample-000586.mp3,coming home a party of tourists passed us singing and playing music,20,0,,,,,False
@@ -596,7 +596,7 @@ cv-valid-dev/sample-000593.mp3,the whole office was struck by a deafening silenc
 cv-valid-dev/sample-000594.mp3,it's easy and yet i've never done it before he thought,1,0,,,,,False
 cv-valid-dev/sample-000595.mp3,if you pay attention to the present you can improve upon it,15,1,,,,,False
 cv-valid-dev/sample-000596.mp3,in another year maybe i can help,1,0,,,,,False
-cv-valid-dev/sample-000597.mp3,sometimes their caravan met with another,2,1,seventies,male,australia,,False
+cv-valid-dev/sample-000597.mp3,sometimes their caravan met with another,2,1,seventies,male,australia,,True
 cv-valid-dev/sample-000598.mp3,in those days very few of the people had any idea about astronomy,5,4,,,,,False
 cv-valid-dev/sample-000599.mp3,then she filled her vessel with water and left,3,0,,,,,False
 cv-valid-dev/sample-000600.mp3,it was just ripe enough to eat,1,0,thirties,male,,,False
@@ -746,7 +746,7 @@ cv-valid-dev/sample-000743.mp3,footprints of mud and clay were on the floor,1,0,
 cv-valid-dev/sample-000744.mp3,the alchemist followed as the boy's horse ran for almost half an hour,4,0,,,,,False
 cv-valid-dev/sample-000745.mp3,but you've got to leave me alone,1,0,sixties,female,us,,False
 cv-valid-dev/sample-000746.mp3,exactly answered the alchemist,2,0,twenties,female,,,False
-cv-valid-dev/sample-000747.mp3,you wanna take this outside,1,0,twenties,male,us,,False
+cv-valid-dev/sample-000747.mp3,you wanna take this outside,1,0,twenties,male,us,,True
 cv-valid-dev/sample-000748.mp3,all you've got to do is talk to him,2,0,twenties,female,us,,False
 cv-valid-dev/sample-000749.mp3,it seemed such a little thing so bright and small and still,2,1,,,,,False
 cv-valid-dev/sample-000750.mp3,the world speaks many languages the boy thought,1,0,fifties,female,us,,False
@@ -969,7 +969,7 @@ cv-valid-dev/sample-000966.mp3,but i'm going to egypt the boy said,1,0,,,,,False
 cv-valid-dev/sample-000967.mp3,you've resented me from the first moment you saw me,1,0,,,,,False
 cv-valid-dev/sample-000968.mp3,the sheep had taught him that,4,0,thirties,female,canada,,False
 cv-valid-dev/sample-000969.mp3,you don't have to apologize,2,0,teens,male,us,,False
-cv-valid-dev/sample-000970.mp3,i'm a sucker for it,1,0,,,,,True
+cv-valid-dev/sample-000970.mp3,i'm a sucker for it,1,0,,,,,False
 cv-valid-dev/sample-000971.mp3,this was my destiny not yours the alchemist answered,2,0,,,,,False
 cv-valid-dev/sample-000972.mp3,darren never saw a bottle till he was six months old,1,0,twenties,female,us,,False
 cv-valid-dev/sample-000973.mp3,i got drunk yesterday and thought i built a super computer,3,0,,,,,False
@@ -1035,7 +1035,7 @@ cv-valid-dev/sample-001032.mp3,but they were not there,3,0,thirties,male,us,,Fal
 cv-valid-dev/sample-001033.mp3,don't you know there are nine jobs waiting for this guy,3,0,twenties,male,us,,False
 cv-valid-dev/sample-001034.mp3,no that's not what i mean,1,0,,,,,False
 cv-valid-dev/sample-001035.mp3,mom took grandma to the garden center to hear the latin names of plants,1,0,,,,,False
-cv-valid-dev/sample-001036.mp3,sandra read aloud the strange excerpt,1,0,twenties,male,us,,True
+cv-valid-dev/sample-001036.mp3,sandra read aloud the strange excerpt,1,0,twenties,male,us,,False
 cv-valid-dev/sample-001037.mp3,there was absolutely no reason for her to announce it to the entire company,6,3,,,,,False
 cv-valid-dev/sample-001038.mp3,the criminals taunted the police officers and prison guards,1,0,thirties,male,us,,False
 cv-valid-dev/sample-001039.mp3,and in that way the months passed,1,0,,,,,False
@@ -1239,7 +1239,7 @@ cv-valid-dev/sample-001236.mp3,why are you carrying money asked the tribesman wh
 cv-valid-dev/sample-001237.mp3,you all know me,1,0,,,,,False
 cv-valid-dev/sample-001238.mp3,using script blockers is generally a good idea but it requires the user to learn a bit,2,0,twenties,male,african,,False
 cv-valid-dev/sample-001239.mp3,it is the most valuable stamp in the world,1,0,,,,,False
-cv-valid-dev/sample-001240.mp3,always heed the omens the old king had said,1,0,,,,,False
+cv-valid-dev/sample-001240.mp3,always heed the omens the old king had said,1,0,,,,,True
 cv-valid-dev/sample-001241.mp3,i had seen all that it would presently bring me,3,0,,,,,False
 cv-valid-dev/sample-001242.mp3,and for wise men gold is the metal that evolved the furthest,2,0,,,,,False
 cv-valid-dev/sample-001243.mp3,the stranger was speaking of things that very few people knew about,1,0,,,,,True
@@ -1310,7 +1310,7 @@ cv-valid-dev/sample-001307.mp3,i'd better see what he's up to,3,0,thirties,femal
 cv-valid-dev/sample-001308.mp3,your dentist called yesterday,1,0,,,,,False
 cv-valid-dev/sample-001309.mp3,that was his work,1,0,,,,,False
 cv-valid-dev/sample-001310.mp3,the conversation was interrupted by the warehouse boss,1,0,,,,,False
-cv-valid-dev/sample-001311.mp3,sandra read aloud the strange excerpt,1,0,,,,,False
+cv-valid-dev/sample-001311.mp3,sandra read aloud the strange excerpt,1,0,,,,,True
 cv-valid-dev/sample-001312.mp3,stanley felt exhilarated,3,0,thirties,male,,,False
 cv-valid-dev/sample-001313.mp3,i just don't trust anyone who says they've never had hamburger helper,5,0,,,,,False
 cv-valid-dev/sample-001314.mp3,i won't ever tell a soul,2,0,,,,,False
@@ -1634,7 +1634,7 @@ cv-valid-dev/sample-001632.mp3,the boy offered his bottle hoping that the old ma
 cv-valid-dev/sample-001633.mp3,we owed everybody in town,2,0,,,,,False
 cv-valid-dev/sample-001634.mp3,what was written on the emerald tablet the boy wanted to know,4,0,twenties,male,england,,False
 cv-valid-dev/sample-001635.mp3,he noticed the unequal cooling of its surface,3,2,,,,,False
-cv-valid-dev/sample-001636.mp3,who you holding out on,1,0,,,,,True
+cv-valid-dev/sample-001636.mp3,who you holding out on,1,0,,,,,False
 cv-valid-dev/sample-001637.mp3,i have been waiting for you here at this oasis for a long time,3,0,,,,,False
 cv-valid-dev/sample-001638.mp3,my freezer contains enough for a banquet,1,0,thirties,male,australia,,False
 cv-valid-dev/sample-001639.mp3,who are you he heard a voice ask him in spanish,3,0,twenties,male,indian,,False
@@ -1976,7 +1976,7 @@ cv-valid-dev/sample-001974.mp3,you should see the other guy specifically how goo
 cv-valid-dev/sample-001975.mp3,you'll be the counselor of the oasis,8,0,fifties,male,ireland,,False
 cv-valid-dev/sample-001976.mp3,shall i announce you,2,0,,,,,False
 cv-valid-dev/sample-001977.mp3,i had seen all that it would presently bring me,4,0,,,,,False
-cv-valid-dev/sample-001978.mp3,this requires a little thought here,2,0,,,,,True
+cv-valid-dev/sample-001978.mp3,this requires a little thought here,2,0,,,,,False
 cv-valid-dev/sample-001979.mp3,he approached the mass and was surprised at the size and the shape,7,0,twenties,,us,,False
 cv-valid-dev/sample-001980.mp3,she's on the air,1,0,,,,,False
 cv-valid-dev/sample-001981.mp3,the space station rocked violently due to the intense pressure wave from the airlock failure,1,0,twenties,male,us,,False
@@ -2006,7 +2006,7 @@ cv-valid-dev/sample-002004.mp3,did you see the garden that it took the master ga
 cv-valid-dev/sample-002005.mp3,i said good night,1,0,,,,,False
 cv-valid-dev/sample-002006.mp3,now i will drift gently off to dreamland,1,0,sixties,male,us,,False
 cv-valid-dev/sample-002007.mp3,tangier is not like the rest of africa,7,0,,,,,False
-cv-valid-dev/sample-002008.mp3,those women are all card sharks don't be fooled,1,0,twenties,female,england,,False
+cv-valid-dev/sample-002008.mp3,those women are all card sharks don't be fooled,1,0,twenties,female,england,,True
 cv-valid-dev/sample-002009.mp3,and for wise men gold is the metal that evolved the furthest,3,0,,,,,False
 cv-valid-dev/sample-002010.mp3,you'll be the counselor of the oasis,1,0,,,,,False
 cv-valid-dev/sample-002011.mp3,he had found where his treasure was and was frightened at what might happen,3,0,twenties,male,,,True
@@ -2099,7 +2099,7 @@ cv-valid-dev/sample-002097.mp3,it's true that everything has its destiny but one
 cv-valid-dev/sample-002098.mp3,everything i say is right,1,0,,,,,False
 cv-valid-dev/sample-002099.mp3,hundreds of observers saw the flame that night and the night after,2,1,,,,,False
 cv-valid-dev/sample-002100.mp3,whenever he could he sought out a new road to travel,2,0,,,,,False
-cv-valid-dev/sample-002101.mp3,who'd you say was gonna get him,3,0,teens,female,us,,True
+cv-valid-dev/sample-002101.mp3,who'd you say was gonna get him,3,0,teens,female,us,,False
 cv-valid-dev/sample-002102.mp3,who do you want,1,0,twenties,male,canada,,False
 cv-valid-dev/sample-002103.mp3,the top of the cylinder was rotating on its body,3,0,,,,,False
 cv-valid-dev/sample-002104.mp3,you'd better take it easy,2,1,thirties,male,england,,True
@@ -2164,7 +2164,7 @@ cv-valid-dev/sample-002162.mp3,we can't leave greg here,2,0,,,,,False
 cv-valid-dev/sample-002163.mp3,i was scared but wasted no time in going out and crossing the bridge to the sand pits,3,0,,,,,False
 cv-valid-dev/sample-002164.mp3,i'm just a man who wanders the desert and knows the stars said the alchemist,1,0,,,,,False
 cv-valid-dev/sample-002165.mp3,on the first day he returned with a rabbit and on the second with two birds,2,0,twenties,female,us,,False
-cv-valid-dev/sample-002166.mp3,be sure you spell the name right,1,0,thirties,male,us,,True
+cv-valid-dev/sample-002166.mp3,be sure you spell the name right,1,0,thirties,male,us,,False
 cv-valid-dev/sample-002167.mp3,it must have fallen while i was sitting over there,2,1,,male,us,,False
 cv-valid-dev/sample-002168.mp3,i hold the power of life and death for every person i take with me,2,0,thirties,male,us,,True
 cv-valid-dev/sample-002169.mp3,i was impatient to see it opened,2,0,,,,,False
@@ -2174,7 +2174,7 @@ cv-valid-dev/sample-002172.mp3,the train lines provided an easy path to follow,1
 cv-valid-dev/sample-002173.mp3,i felt a chill down my spine,1,0,thirties,female,canada,,False
 cv-valid-dev/sample-002174.mp3,it was engineering at its finest,2,0,,,,,False
 cv-valid-dev/sample-002175.mp3,about eleven i walked back to my home in maybury because nothing seemed to be happening,2,1,,,,,False
-cv-valid-dev/sample-002176.mp3,you wanna take this outside,5,0,,,,,False
+cv-valid-dev/sample-002176.mp3,you wanna take this outside,5,0,,,,,True
 cv-valid-dev/sample-002177.mp3,they formed heaps that are visible a mile and a half away,3,0,twenties,male,us,,False
 cv-valid-dev/sample-002178.mp3,where does she get that stuff,2,1,,,,,False
 cv-valid-dev/sample-002179.mp3,excuse me nudism is not allowed at this part of the beach,2,0,,,,,False
@@ -2280,7 +2280,7 @@ cv-valid-dev/sample-002278.mp3,half an hour later his shovel hit something solid
 cv-valid-dev/sample-002279.mp3,he got up early with the idea of finding it,3,0,,,,,False
 cv-valid-dev/sample-002280.mp3,he had not a cent in his pocket but he had faith,8,1,,,,,False
 cv-valid-dev/sample-002281.mp3,he thought that with some patience he'd be able to transform everything into gold,2,0,,,,,False
-cv-valid-dev/sample-002282.mp3,the boy was strong and wanted to retaliate but he was in a foreign country,1,0,,,,,False
+cv-valid-dev/sample-002282.mp3,the boy was strong and wanted to retaliate but he was in a foreign country,1,0,,,,,True
 cv-valid-dev/sample-002283.mp3,he almost began to tell about his treasure but decided not to do so,4,0,thirties,female,us,,False
 cv-valid-dev/sample-002284.mp3,it was a pleasant change from talking to his sheep,2,0,,,,,False
 cv-valid-dev/sample-002285.mp3,they had gone away to breakfast at henderson's house,2,0,,,,,False
@@ -2340,7 +2340,7 @@ cv-valid-dev/sample-002338.mp3,his soul must be too primitive to understand thos
 cv-valid-dev/sample-002339.mp3,my mother just called you,1,0,twenties,male,us,,False
 cv-valid-dev/sample-002340.mp3,the war is going to end someday the girl said,1,0,,,,,False
 cv-valid-dev/sample-002341.mp3,html is not a programming language,1,0,twenties,male,us,,False
-cv-valid-dev/sample-002342.mp3,strange images passed through my mind,4,3,,,,,True
+cv-valid-dev/sample-002342.mp3,strange images passed through my mind,4,3,,,,,False
 cv-valid-dev/sample-002343.mp3,there was a small building there with a window at which people bought tickets to africa,2,1,,,,,False
 cv-valid-dev/sample-002344.mp3,drop the whole business quickly,2,0,,,,,False
 cv-valid-dev/sample-002345.mp3,he just got a new kite for his birthday,2,0,,,,,False
@@ -2599,7 +2599,7 @@ cv-valid-dev/sample-002597.mp3,the burning fire had been extinguished,1,0,twenti
 cv-valid-dev/sample-002598.mp3,catherine walked alongside the canal,2,0,,,,,False
 cv-valid-dev/sample-002599.mp3,why the shots stopped after the tenth no one on earth has tried to explain,2,0,twenties,male,,,False
 cv-valid-dev/sample-002600.mp3,the rest of you get in here and riot,1,0,,,,,False
-cv-valid-dev/sample-002601.mp3,the guy thought he was a lunatic at large and made an unsuccessful attempt to stop him,3,0,,,,,False
+cv-valid-dev/sample-002601.mp3,the guy thought he was a lunatic at large and made an unsuccessful attempt to stop him,3,0,,,,,True
 cv-valid-dev/sample-002602.mp3,the horizon was tinged with red and suddenly the sun appeared,3,0,,,,,False
 cv-valid-dev/sample-002603.mp3,in order to find the treasure you will have to follow the omens,1,0,sixties,male,us,,False
 cv-valid-dev/sample-002604.mp3,the burning fire had been extinguished,6,0,,,,,False
@@ -2704,7 +2704,7 @@ cv-valid-dev/sample-002702.mp3,it was however still so hot from its flight throu
 cv-valid-dev/sample-002703.mp3,treason is a blow that comes unexpectedly,2,0,,,,,False
 cv-valid-dev/sample-002704.mp3,that was his work,1,0,,,,,False
 cv-valid-dev/sample-002705.mp3,they could barely see the boy,1,0,fourties,male,england,,False
-cv-valid-dev/sample-002706.mp3,strange images passed through my mind,3,0,,,,,True
+cv-valid-dev/sample-002706.mp3,strange images passed through my mind,3,0,,,,,False
 cv-valid-dev/sample-002707.mp3,it means only that the heart does what it can the alchemist said,2,1,,,,,False
 cv-valid-dev/sample-002708.mp3,the boy preferred wine,5,0,,,,,False
 cv-valid-dev/sample-002709.mp3,he was just and good,1,0,,,,,False
@@ -2762,7 +2762,7 @@ cv-valid-dev/sample-002760.mp3,he moved about invisible but everyone could hear 
 cv-valid-dev/sample-002761.mp3,mother is coming with us on the train,1,0,,,,,False
 cv-valid-dev/sample-002762.mp3,that's true the boy thought,2,0,,,,,False
 cv-valid-dev/sample-002763.mp3,you just don't know all that you've done,1,0,thirties,female,us,,False
-cv-valid-dev/sample-002764.mp3,always heed the omens the old king had said,3,0,,,,,False
+cv-valid-dev/sample-002764.mp3,always heed the omens the old king had said,3,0,,,,,True
 cv-valid-dev/sample-002765.mp3,that night there was another jetting out of gas from the distant planet,14,0,thirties,male,england,,False
 cv-valid-dev/sample-002766.mp3,a half a heelot,1,0,twenties,male,,,False
 cv-valid-dev/sample-002767.mp3,to do that successfully i must have no fear of failure,1,0,twenties,male,us,,False
@@ -2884,7 +2884,7 @@ cv-valid-dev/sample-002882.mp3,it seemed to him that it fell to earth about one 
 cv-valid-dev/sample-002883.mp3,eventually the merchant had to hire two more employees,5,1,,,,,False
 cv-valid-dev/sample-002884.mp3,look around some time,1,0,,,,,True
 cv-valid-dev/sample-002885.mp3,the peak of this mountain is over two thousand meters above sea level,2,0,,,,,False
-cv-valid-dev/sample-002886.mp3,then he realized that he had been distracted for a few moments looking at the sword,3,0,twenties,female,us,,True
+cv-valid-dev/sample-002886.mp3,then he realized that he had been distracted for a few moments looking at the sword,3,0,twenties,female,us,,False
 cv-valid-dev/sample-002887.mp3,this is my last chance,2,0,,,,,False
 cv-valid-dev/sample-002888.mp3,worryingly the radio signal became weaker,1,0,,,,,False
 cv-valid-dev/sample-002889.mp3,the boy offered his bottle hoping that the old man would leave him alone,1,0,thirties,male,us,,False
@@ -3111,7 +3111,7 @@ cv-valid-dev/sample-003109.mp3,i'm not going very far the alchemist answered loo
 cv-valid-dev/sample-003110.mp3,let me tell you what will happen,2,1,,,,,False
 cv-valid-dev/sample-003111.mp3,the old man was probably a gypsy too,1,0,sixties,male,england,,False
 cv-valid-dev/sample-003112.mp3,watch out for his venom the boy said,2,0,twenties,male,england,,True
-cv-valid-dev/sample-003113.mp3,do you care if i sit down out here,3,0,,,,,False
+cv-valid-dev/sample-003113.mp3,do you care if i sit down out here,3,0,,,,,True
 cv-valid-dev/sample-003114.mp3,we were all made by the same hand and we have the same soul,3,0,,,,,False
 cv-valid-dev/sample-003115.mp3,the two were taken to a nearby military camp,3,0,,,,,False
 cv-valid-dev/sample-003116.mp3,can't they see it's a frame up,2,0,,,,,False
@@ -3242,7 +3242,7 @@ cv-valid-dev/sample-003240.mp3,you already know all you need to know,3,0,,,,,Fal
 cv-valid-dev/sample-003241.mp3,you can hear out of it,2,0,fourties,male,canada,,False
 cv-valid-dev/sample-003242.mp3,she and the judge are like corned beef and cabbage,2,0,thirties,male,england,,False
 cv-valid-dev/sample-003243.mp3,we've done it said the englishman who had also awakened early,2,0,,,,,False
-cv-valid-dev/sample-003244.mp3,he felt unsafe like during his first lesson in driving school,1,0,,,,,True
+cv-valid-dev/sample-003244.mp3,he felt unsafe like during his first lesson in driving school,1,0,,,,,False
 cv-valid-dev/sample-003245.mp3,i'm going to need it,1,0,,,,,True
 cv-valid-dev/sample-003246.mp3,the young arab took out a book and began to read,2,0,teens,male,us,,False
 cv-valid-dev/sample-003247.mp3,that man is terrific,1,0,,,,,False
@@ -3309,7 +3309,7 @@ cv-valid-dev/sample-003307.mp3,you came so that you could learn about your dream
 cv-valid-dev/sample-003308.mp3,did you see his picture on the cover of time,1,0,twenties,female,us,,False
 cv-valid-dev/sample-003309.mp3,in one he had read that many years ago a famous arabian alchemist had visited europe,7,0,twenties,male,canada,,False
 cv-valid-dev/sample-003310.mp3,the englishman's eyes lit up,3,0,,,,,False
-cv-valid-dev/sample-003311.mp3,i hope it works,1,0,thirties,male,scotland,,False
+cv-valid-dev/sample-003311.mp3,i hope it works,1,0,thirties,male,scotland,,True
 cv-valid-dev/sample-003312.mp3,they stood there looking at the moon,1,0,,,,,False
 cv-valid-dev/sample-003313.mp3,the camel driver though seemed not to be very concerned with the threat of war,2,0,thirties,male,,,False
 cv-valid-dev/sample-003314.mp3,it's too bad that he's quickly going to forget my name he thought,2,0,twenties,male,,,False
@@ -3338,7 +3338,7 @@ cv-valid-dev/sample-003336.mp3,you have enough gold to buy many sheep and many c
 cv-valid-dev/sample-003337.mp3,my wife pointed out to me the brightness of the red green and yellow signal lights,10,1,,,,,False
 cv-valid-dev/sample-003338.mp3,his name is welch,1,0,,,,,False
 cv-valid-dev/sample-003339.mp3,enough said the boy,1,0,,,,,False
-cv-valid-dev/sample-003340.mp3,he's trying to trick you again,3,0,,,,,True
+cv-valid-dev/sample-003340.mp3,he's trying to trick you again,3,0,,,,,False
 cv-valid-dev/sample-003341.mp3,i told him we could teach her to ignore people who waste her time,2,0,,,,,False
 cv-valid-dev/sample-003342.mp3,the serpent relaxed immediately,1,0,fourties,male,us,,False
 cv-valid-dev/sample-003343.mp3,it's called the principle of favorability,7,0,,,,,False
@@ -3487,7 +3487,7 @@ cv-valid-dev/sample-003485.mp3,but you want to know something,2,0,fourties,male,
 cv-valid-dev/sample-003486.mp3,it left a greenish streak that glowed for some seconds,2,1,thirties,male,australia,,False
 cv-valid-dev/sample-003487.mp3,haven't you even started,1,0,,,,,False
 cv-valid-dev/sample-003488.mp3,you've got everything all set,1,0,,,,,False
-cv-valid-dev/sample-003489.mp3,please don't make me,1,0,fourties,male,england,,True
+cv-valid-dev/sample-003489.mp3,please don't make me,1,0,fourties,male,england,,False
 cv-valid-dev/sample-003490.mp3,i'm getting trevor ready,1,0,,,,,False
 cv-valid-dev/sample-003491.mp3,dennis was not a business man,2,0,,,,,False
 cv-valid-dev/sample-003492.mp3,he could always go back to being a shepherd,1,0,,,,,False
@@ -3596,7 +3596,7 @@ cv-valid-dev/sample-003594.mp3,i'm going to them,1,0,,,,,False
 cv-valid-dev/sample-003595.mp3,i want my husband to wander as free as the wind that shapes the dunes,3,0,seventies,male,australia,,False
 cv-valid-dev/sample-003596.mp3,that he wanted to travel,2,0,,,,,False
 cv-valid-dev/sample-003597.mp3,you can't say that about my father,1,0,,,,,False
-cv-valid-dev/sample-003598.mp3,i'm talking about the building and loan,1,0,twenties,male,newzealand,,True
+cv-valid-dev/sample-003598.mp3,i'm talking about the building and loan,1,0,twenties,male,newzealand,,False
 cv-valid-dev/sample-003599.mp3,henderson stood up with a spade in his hand,2,0,,,,,False
 cv-valid-dev/sample-003600.mp3,but the englishman appeared not to attach any importance to it,1,0,,,,,False
 cv-valid-dev/sample-003601.mp3,i'm not afraid of anything,1,0,teens,male,us,,False
@@ -3870,7 +3870,7 @@ cv-valid-dev/sample-003868.mp3,why didn't you say something,1,0,,,,,False
 cv-valid-dev/sample-003869.mp3,revenge is not my style but obviously accidents will happen,2,0,,,,,True
 cv-valid-dev/sample-003870.mp3,the thing itself was almost entirely buried in sand,8,2,,,,,False
 cv-valid-dev/sample-003871.mp3,in those days very few of the people had any idea about astronomy,3,1,,,,,False
-cv-valid-dev/sample-003872.mp3,give me precise instructions how to decontaminate the trooper,1,0,,,,,False
+cv-valid-dev/sample-003872.mp3,give me precise instructions how to decontaminate the trooper,1,0,,,,,True
 cv-valid-dev/sample-003873.mp3,the boy looked around for the ovens and other apparatus used in alchemy but saw none,1,0,fourties,male,us,,False
 cv-valid-dev/sample-003874.mp3,you've got something on your mind,1,0,,,,,False
 cv-valid-dev/sample-003875.mp3,the old man wore a breastplate of heavy gold covered with precious stones,4,1,,,,,False
@@ -3968,7 +3968,7 @@ cv-valid-dev/sample-003966.mp3,other servants maintained the fires in the hookah
 cv-valid-dev/sample-003967.mp3,after all he had all his money,1,0,,,,,False
 cv-valid-dev/sample-003968.mp3,he wanted to forget about the vision and return to his meditation,2,0,twenties,male,us,,False
 cv-valid-dev/sample-003969.mp3,in spite of this i still believed that there were men in mars,4,0,fourties,male,us,,False
-cv-valid-dev/sample-003970.mp3,creativity is not something exclusive to humans,1,0,,,,,True
+cv-valid-dev/sample-003970.mp3,creativity is not something exclusive to humans,1,0,,,,,False
 cv-valid-dev/sample-003971.mp3,i'll return just as your father came back to your mother he said,4,1,thirties,male,us,,False
 cv-valid-dev/sample-003972.mp3,then she took both of his hands in hers and began quietly to pray,2,0,,,,,False
 cv-valid-dev/sample-003973.mp3,these trousers don't fit very well,3,0,,,,,False
