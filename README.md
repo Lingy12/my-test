@@ -41,12 +41,20 @@ python asr/cv_decode.py # The result is saved in the asr/cv-valid-dev_asr.txt
 ```bash
 cd asr-train
 
-python cv-train-2a.py
+python cv-train-2a.py # Note the pipeline is also in cv-train-2a.ipynb, but I put it as seperate python script because I could keep it in tmux session. 
+
+# This will create the model and results.json containing intermediate train and validation logging result.
 
 mv ../models/checkpoints/best-model ../models/wav2vec2-large-960h-cv
 ```
 
 ### 2. Plot the result, and run inference comparasion
+
+```bash
+
+# Use part after Training in cv-train-2a.ipynb
+
+```
 
 ## Task 5
 
