@@ -16,7 +16,7 @@ mv common_voice.zip\?rlkey=lz3dtjuhekc3xw4jnoeoqy5yu\&dl=0 common_voice.zip
 unzip common_voice.zip
 ```
 
-## Task 1
+## Task 2
 
 ### 1. Starting asr docker image
 
@@ -30,11 +30,11 @@ docker compose -f docker-compose-asr.yaml up --build -d
 
 ```bash
 
-python asr/cv_decode.py # The result is saved in the data/cv-valid-dev, but since data directory is ignored in git, it's in example_result/cv-valid-dev_asr.csv
+python asr/cv_decode.py # The result is saved in the asr/cv-valid-dev_asr.txt
 
 ```
 
-## Task 2
+## Task 3
 
 ### 1. Finetuning the Model
 
@@ -42,6 +42,13 @@ python asr/cv_decode.py # The result is saved in the data/cv-valid-dev, but sinc
 cd asr-train
 
 python cv-train-2a.py
+
+mv ../models/checkpoints/best-model ../models/wav2vec2-large-960h-cv
 ```
 
 ### 2. Plot the result, and run inference comparasion
+
+## Task 5
+
+1. cv-hotword-5a.ipynb: Run the finetuned model inference, and save a inference_results.csv. Also, output detected.txt which contains the transcription that contains hot words.
+2. cv-hostword-similarity-5b.ipynb: Use the inference_results.csv produced in previous step, then use the embedding to check whether similar phases is in transcription. Then output cv-valid-dev-updated.csv.

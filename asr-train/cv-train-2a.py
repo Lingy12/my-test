@@ -121,7 +121,8 @@ The learning rate is selected by sub-sample the validation samples, and run for 
 
 Batch size is selected that largest to fit the GPU VRAM
 '''
-def train():
+
+def train(run_final_validation: bool = True):
     MODEL_NAME = "facebook/wav2vec2-large-960h"
     processor = Wav2Vec2Processor.from_pretrained(MODEL_NAME, sampling_rate=16000, ctc_loss_reduction="mean")
     model = Wav2Vec2ForCTC.from_pretrained(MODEL_NAME)
@@ -129,14 +130,15 @@ def train():
     TRAIN_SPLIT_RATIO = 0.7
     LEARNING_RATE = 1e-5
     TRAIN_BATCH_SIZE = 16
-    VAL_BATCH_SIZE = 16
-    NUM_EPOCHS = 1
+    VAL_BATCH_SIZE = 32
+    NUM_EPOCHS = 3
     # EVAL_STEP: Controls how often validation is run and metrics are evaluated
     EVAL_STEP = 1000
     # LOG_STEP: Controls how often training loss is logged to console
     LOG_STEP = 50 # Log training loss every 50 steps
     GRADIENT_ACCUMULATION_STEPS = 1
     MAX_STEP_CHECKPOINTS = 3 # Maximum number of step checkpoints to keep
+    EARLY_STOP_PATIENCE = 3 # Number of validation checks to wait before early stopping
 
     # Adjust EVAL_STEP to account for gradient accumulation
     EVAL_STEP = EVAL_STEP * GRADIENT_ACCUMULATION_STEPS
@@ -176,7 +178,7 @@ def train():
         train_dataset,
         batch_size=TRAIN_BATCH_SIZE,
         collate_fn=data_collator,
-        num_workers=0, # Set to 0 for simpler debugging, adjust for production
+        num_workers=32, # Set to 0 for simpler debugging, adjust for production
         pin_memory=True,
         shuffle=True
     )
@@ -184,7 +186,7 @@ def train():
         val_dataset,
         batch_size=VAL_BATCH_SIZE,
         collate_fn=data_collator,
-        num_workers=0, # Set to 0 for simpler debugging, adjust for production
+        num_workers=32, # Set to 0 for simpler debugging, adjust for production
         pin_memory=True,
         shuffle=False
     )
@@ -211,13 +213,27 @@ def train():
     # List to keep track of saved step checkpoint paths for rotation
     saved_step_checkpoints = []
 
+    # Early stopping variables
+    epochs_no_improve = 0
+    early_stop = False
+    
+    # Track the last step reached for potential final validation
+    last_step_reached = 0
+
     for epoch in range(NUM_EPOCHS):
+        if early_stop:
+            print("Early stopping triggered.")
+            break
+
         # --- Training Phase ---
         model.train()
         total_train_loss_epoch = 0 # For overall epoch average train loss
         optimizer.zero_grad() # Ensure gradients are zeroed at the start of each epoch
 
         for i, batch in enumerate(tqdm(train_dataloader, desc=f"Epoch {epoch+1} Training", file=sys.stdout)):
+            current_step = (epoch * len(train_dataloader)) + (i + 1)
+            last_step_reached = current_step # Update last step reached
+
             batch = {k: v.to(device) for k, v in batch.items()}
 
             with torch.cuda.amp.autocast():
@@ -238,24 +254,24 @@ def train():
             accumulated_loss_for_eval_step += loss.item()
 
             # Perform optimizer step and zero gradients only after accumulating enough gradients
-            if (i + 1) % GRADIENT_ACCUMULATION_STEPS == 0:
+            if current_step % GRADIENT_ACCUMULATION_STEPS == 0:
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
                 scaler.step(optimizer)
                 scaler.update()
                 optimizer.zero_grad() # Zero gradients after the optimizer step
 
             # --- Logging Training Loss (Every LOG_STEP) ---
-            if (i + 1) % LOG_STEP == 0:
+            if current_step % LOG_STEP == 0:
                 # Calculate average accumulated loss over the LOG_STEP interval
                 avg_train_loss_current_log_interval = accumulated_loss_for_log_step / batches_in_log_interval
                 train_losses_logged.append(avg_train_loss_current_log_interval)
-                print(f"Step {i+1} - Train Loss (last {batches_in_log_interval} batches): {avg_train_loss_current_log_interval:.4f}")
+                print(f"Step {current_step} - Train Loss (last {batches_in_log_interval} batches): {avg_train_loss_current_log_interval:.4f}")
                 # Reset accumulator for the next LOG_STEP interval
                 accumulated_loss_for_log_step = 0
                 batches_in_log_interval = 0
 
             # --- Validation and WER Calculation Phase (Every EVAL_STEP) ---
-            if (i + 1) % EVAL_STEP == 0:
+            if current_step % EVAL_STEP == 0:
                 # Calculate average training loss over the EVAL_STEP interval
                 # Divide by the actual number of batches in the EVAL_STEP interval
                 current_train_loss_for_eval = accumulated_loss_for_eval_step / (EVAL_STEP / GRADIENT_ACCUMULATION_STEPS)
@@ -269,7 +285,7 @@ def train():
 
                 with torch.no_grad():
                     # Ensure tqdm prints to sys.stdout for consistency
-                    for val_batch in tqdm(val_dataloader, desc=f"Step {i+1} Validation", file=sys.stdout):
+                    for val_batch in tqdm(val_dataloader, desc=f"Step {current_step} Validation", file=sys.stdout):
                         val_batch = {k: v.to(device) for k, v in val_batch.items()}
                         outputs = model(input_values=val_batch["input_values"], labels=val_batch["labels"])
                         val_loss = outputs.loss
@@ -296,22 +312,39 @@ def train():
                 wer_score = wer_metric.compute(predictions=all_preds, references=all_labels)
                 val_wer_scores.append(wer_score)
                 val_results.append({
-                    "step": i + 1,
+                    "step": current_step,
                     "validation_loss": avg_val_loss,
                     "wer": wer_score,
                     "predictions": all_preds,
                     "references": all_labels
                 })
-                log_steps_recorded.append(i + 1) # These steps correspond to validation runs
+                log_steps_recorded.append(current_step) # These steps correspond to validation runs
 
-                print(f"Step {i+1} - Train Loss (avg over last {EVAL_STEP} batches): {current_train_loss_for_eval:.4f} - Validation Loss: {avg_val_loss:.4f} - Validation WER: {wer_score:.4f}")
+                print(f"Step {current_step} - Train Loss (avg over last {EVAL_STEP} batches): {current_train_loss_for_eval:.4f} - Validation Loss: {avg_val_loss:.4f} - Validation WER: {wer_score:.4f}")
+
+                # --- Early Stopping Logic ---
+                if wer_score < best_wer:
+                    best_wer = wer_score
+                    epochs_no_improve = 0
+                    # Create directory for the best model if it doesn't exist
+                    os.makedirs(best_model_save_path, exist_ok=True)
+                    model.save_pretrained(best_model_save_path)
+                    processor.save_pretrained(best_model_save_path)
+                    print(f"New best model saved at step {current_step} with WER: {best_wer:.4f} to {best_model_save_path}")
+                else:
+                    epochs_no_improve += 1
+                    print(f"Validation WER did not improve for {epochs_no_improve} times.")
+                    if epochs_no_improve >= EARLY_STOP_PATIENCE:
+                        print(f"Early stopping: Validation WER has not improved for {EARLY_STOP_PATIENCE} consecutive validation checks. Stopping training.")
+                        early_stop = True
+                        break # Break from the inner loop (training steps)
 
                 # --- Save model at every evaluation step (with rotation) ---
-                current_step_model_path = os.path.join(model_save_base_path, f"model_step_{i+1}")
+                current_step_model_path = os.path.join(model_save_base_path, f"model_step_{current_step}")
                 os.makedirs(current_step_model_path, exist_ok=True)
                 model.save_pretrained(current_step_model_path)
                 processor.save_pretrained(current_step_model_path)
-                print(f"Model saved for step {i+1} to {current_step_model_path}")
+                print(f"Model saved for step {current_step} to {current_step_model_path}")
 
                 # Add the new checkpoint path to the list
                 saved_step_checkpoints.append(current_step_model_path)
@@ -323,29 +356,76 @@ def train():
                         shutil.rmtree(oldest_checkpoint_path) # Delete the directory
                         print(f"Removed oldest checkpoint: {oldest_checkpoint_path}")
 
-                # --- Save best model based on WER ---
-                if wer_score < best_wer:
-                    best_wer = wer_score
-                    # Create directory for the best model if it doesn't exist
-                    os.makedirs(best_model_save_path, exist_ok=True)
-                    model.save_pretrained(best_model_save_path)
-                    processor.save_pretrained(best_model_save_path)
-                    print(f"New best model saved at step {i+1} with WER: {best_wer:.4f} to {best_model_save_path}")
-
                 model.train() # Set model back to training mode
 
         # Handle any remaining gradients if the total number of batches is not a multiple of GRADIENT_ACCUMULATION_STEPS
-        if (i + 1) % GRADIENT_ACCUMULATION_STEPS != 0:
+        # and if training is not stopping immediately
+        if not early_stop and (current_step % GRADIENT_ACCUMULATION_STEPS != 0):
             torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
             scaler.step(optimizer)
             scaler.update()
             optimizer.zero_grad()
 
+        if early_stop: # Check again after the inner loop in case it broke due to early stopping
+            break
+
         avg_train_loss_epoch = total_train_loss_epoch / len(train_dataloader)
         print(f"Epoch {epoch+1} - Average Epoch Train Loss: {avg_train_loss_epoch:.4f}")
-
+    
     print("\nTraining complete!")
-    # The model saved at the end of training (last step)
+
+    # --- Final Validation (Optional) ---
+    if run_final_validation:
+        print(f"\nRunning final validation at step {last_step_reached} (controlled by run_final_validation={run_final_validation})...")
+        model.eval() # Set model to evaluation mode
+        total_val_loss = 0
+        all_preds = []
+        all_labels = []
+
+        with torch.no_grad():
+            for val_batch in tqdm(val_dataloader, desc=f"Final Validation", file=sys.stdout):
+                val_batch = {k: v.to(device) for k, v in val_batch.items()}
+                outputs = model(input_values=val_batch["input_values"], labels=val_batch["labels"])
+                val_loss = outputs.loss
+                total_val_loss += val_loss.item()
+
+                logits = outputs.logits
+                pred_ids = torch.argmax(logits, dim=-1)
+
+                val_batch["labels"][val_batch["labels"] == -100] = processor.tokenizer.pad_token_id
+
+                predictions = processor.batch_decode(pred_ids)
+                references = processor.batch_decode(val_batch["labels"], group_tokens=False)
+
+                all_preds.extend(predictions)
+                all_labels.extend(references)
+
+        avg_val_loss = total_val_loss / len(val_dataloader)
+        wer_score = wer_metric.compute(predictions=all_preds, references=all_labels)
+
+        val_losses.append(avg_val_loss)
+        val_wer_scores.append(wer_score)
+        val_results.append({
+            "step": last_step_reached,
+            "validation_loss": avg_val_loss,
+            "wer": wer_score,
+            "predictions": all_preds,
+            "references": all_labels
+        })
+        log_steps_recorded.append(last_step_reached)
+
+        print(f"Final Validation Results (Step {last_step_reached}): Loss: {avg_val_loss:.4f}, WER: {wer_score:.4f}")
+        
+        if wer_score < best_wer:
+            best_wer = wer_score
+            # Create directory for the best model if it doesn't exist
+            os.makedirs(best_model_save_path, exist_ok=True)
+            model.save_pretrained(best_model_save_path)
+            processor.save_pretrained(best_model_save_path)
+            print(f"Final best model saved at step {last_step_reached} with WER: {best_wer:.4f} to {best_model_save_path}")
+
+    # The model saved as 'best_model' is the one with the lowest WER throughout training.
+    # We explicitly save the final state of the model as 'final_model' as well.
     final_model_save_path = os.path.join(model_save_base_path, "final_model")
     os.makedirs(final_model_save_path, exist_ok=True)
     model.save_pretrained(final_model_save_path)
@@ -356,7 +436,8 @@ def train():
     return train_losses_logged, val_losses, log_steps_recorded, val_wer_scores, val_results
 
 
-train_losses, val_losses, log_steps_recorded, val_results = train()
+
+train_losses, val_losses, log_steps_recorded, val_wer_scores, val_results = train()
 
 with open('./results.json', 'w') as f:
     import json
@@ -364,5 +445,6 @@ with open('./results.json', 'w') as f:
         "train_losses": train_losses,
         "val_losses": val_losses,
         "log_steps_recorded": log_steps_recorded,
+        "val_wer_scores": val_wer_scores,
         "val_results": val_results
     }, f, indent=4)
