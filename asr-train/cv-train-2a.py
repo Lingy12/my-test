@@ -206,7 +206,7 @@ def train(run_final_validation: bool = True):
 
     # Initialize variables for best model saving
     best_wer = float('inf')
-    model_save_base_path = "../models/wav2vec2-large-960h-cv"
+    model_save_base_path = "../models/checkpoints"
     os.makedirs(model_save_base_path, exist_ok=True) # Ensure base directory exists
     best_model_save_path = os.path.join(model_save_base_path, "best_model")
 
