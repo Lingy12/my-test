@@ -22,6 +22,18 @@ mv common_voice.zip\?rlkey=lz3dtjuhekc3xw4jnoeoqy5yu\&dl=0 common_voice.zip
 unzip common_voice.zip
 ```
 
+## Output Model
+
+The whole pipeline will have a model saved at models/wav2vec-large-960h-cv. If you want to skip the training, you could run the following:
+
+```bash
+mkdir models
+
+cd models
+
+git lfs clone https://huggingface.co/lingy/wav2vec2-large-960h-cv
+```
+
 ## Task 2
 
 ### 1. Starting asr docker image
