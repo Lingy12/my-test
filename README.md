@@ -2,6 +2,12 @@
 
 requirements: Running at 1 A100 80GB
 
+## Envrionment set-up
+
+```bash
+bash setup.sh
+```
+
 ## Data set-up
 
 ```bash
