@@ -5,9 +5,9 @@ requirements: Running at 1 A100 80GB
 ## Envrionment set-up
 
 ```bash
-bash setup.sh
-
 git lfs clone git@github.com:Lingy12/my-test.git # Use lfs in order to fetch the existing training results, if you want to rerun the whole pipeline, normal git clone will do.
+
+bash setup.sh
 ```
 
 ## Data set-up
