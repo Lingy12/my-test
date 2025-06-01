@@ -1,11 +1,13 @@
-from fastapi import FastAPI, HTTPException, File, UploadFile
-from fastapi.middleware.cors import CORSMiddleware
-import tempfile
 import os
+import tempfile
+
+import numpy as np
 import soundfile as sf
 import torch
-from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
-import numpy as np
+import torchaudio
+from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
+from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 app = FastAPI(
@@ -50,13 +52,9 @@ async def transcribe(file: UploadFile = File(...)):
         
         # Resample to 16kHz if needed
         if sample_rate != 16000:
-            # Calculate new length for 16kHz
-            new_length = int(len(audio_array) * 16000 / sample_rate)
-            audio_array = np.interp(
-                np.linspace(0, len(audio_array), new_length),
-                np.arange(len(audio_array)),
-                audio_array
-            )
+            resampler = torchaudio.transforms.Resample(orig_freq=sample_rate, new_freq=16000)
+            audio_array = torch.from_numpy(audio_array).float()
+            audio_array = resampler(audio_array).numpy()
             sample_rate = 16000
         
         # Get duration
