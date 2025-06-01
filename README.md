@@ -1,6 +1,6 @@
 # my-test
 
-requirements: Running at 1 A100 80GB
+requirements: Running at 1 A100 80GB, python3 is installed
 
 Note: Usually the intermediate results file should be put in .gitignore. Just for easier reproduce for certain part of the code without rerun the training pipeline, I use lfs for saving the intermediate results, and huggingface for saving the tuned model.
 
