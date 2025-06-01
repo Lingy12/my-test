@@ -2,10 +2,15 @@
 
 requirements: Running at 1 A100 80GB
 
+Note: Usually the intermediate results file should be put in .gitignore. Just for easier reproduce for certain part of the code without rerun the training pipeline, I use lfs for saving the intermediate results, and huggingface for saving the tuned model.
+
 ## Envrionment set-up
 
 ```bash
-git lfs clone git@github.com:Lingy12/my-test.git # Use lfs in order to fetch the existing training results, if you want to rerun the whole pipeline, normal git clone will do.
+git lfs clone git@github.com:Lingy12/my-test.git
+
+# Use lfs in order to fetch the existing training results,
+# if you want to rerun the whole pipeline, normal git clone will do.
 
 bash setup.sh
 ```
