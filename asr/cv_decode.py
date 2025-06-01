@@ -50,4 +50,4 @@ for i in tqdm(range(len(data_index))):
     # break
 
 data_index['generated_text'] = results
-data_index.to_csv(f"./{TARGET}_asr.csv", index=False)
+data_index.to_csv(f"./asr/{TARGET}_asr.csv", index=False)
