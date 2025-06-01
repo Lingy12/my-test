@@ -36,6 +36,8 @@ python asr/cv_decode.py # The result is saved in the asr/cv-valid-dev_asr.txt
 
 ## Task 3
 
+Assumption: The wav2vec2 tokenizer only consume upper case text without any punctuation. The due to the GPU memory limitation, I limit the time of the audio to 20 seconds. 
+
 ### 1. Finetuning the Model
 
 ```bash
